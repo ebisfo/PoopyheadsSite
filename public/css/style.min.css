@@ -427,7 +427,7 @@ p {
   right: -125px;
   width: 493px;
   height: 493px;
-  background: linear-gradient(162.6deg, #C9B494 23.13%, rgba(201, 180, 148, 0) 81.3%);
+  /* background: linear-gradient(162.6deg, #C9B494 23.13%, rgba(201, 180, 148, 0) 81.3%); */
   filter: blur(173px);
   z-index: -1;
 }
@@ -1322,7 +1322,7 @@ display: block;
   left: -350px;
   width: 493px;
   height: 493px;
-  background: linear-gradient(162.6deg, #C9B494 23.13%, rgba(201, 180, 148, 0) 81.3%);
+  /* background: linear-gradient(162.6deg, #C9B494 23.13%, rgba(201, 180, 148, 0) 81.3%); */
   filter: blur(173px);
   z-index: -1;
 }
@@ -2888,7 +2888,8 @@ footer .social-icons__link svg:hover, footer .social-icons__link svg:active {
 }
 
 .page-404 {
-  background: no-repeat center/cover url(../img/bg-404.png), #d0eced;
+  background:  #d0eced;
+  /* no-repeat center/cover url(../img/bg-404.png), */
 }
 
 .section-404 {
