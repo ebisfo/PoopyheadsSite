@@ -1,0 +1,87 @@
+.benefits {
+  overflow-x: hidden;
+  padding: 0 0 60px;
+
+  @media (min-width: 768px) {
+    padding: 0 0 80px;
+  }
+
+  @media (min-width: 1200px) {
+    padding: 0 0 120px;
+  }
+
+  &__title {
+    margin-bottom: 14px;
+    text-align: center;
+    margin-left: -12px;
+
+    @media (min-width: 992px) {
+      margin-left: 0;
+    }
+  }
+
+  &__subtitle {
+    margin-bottom: 56px;
+    text-align: center;
+    margin-left: -12px;
+
+    @media (min-width: 992px) {
+      margin-left: 0;
+    }
+  }
+
+  &-carousel-top,
+  &-carousel-down  {
+    .owl-stage {
+      transition: all 1s cubic-bezier(0.4, 0, 1, 1) 0s !important;
+    }
+  }
+
+  &__item {
+    position: relative;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    padding: 18px 20px;
+    background: $black;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    margin-right: 60px;
+    margin-bottom: 30px;
+
+    @media (min-width: 1400px) {
+      margin-right: 80px;
+    }
+
+    &::after {
+      position: absolute;
+      right: calc( -30px - 11.5px );
+      content: '';
+      display: block;
+      min-width: 23px;
+      height: 23px;
+      background: no-repeat center/contain url(@img/icons/star-yellow.svg);
+
+      @media (min-width: 1400px) {
+        right: calc( -40px - 17px );
+        min-width: 34.5px;
+        height: 34.5px;
+      }
+    }
+  }
+
+  &__icon {
+    margin-right: 17.5px;
+    min-width: 30px;
+    width: 30px !important;
+    height: 30px;
+    object-fit: contain;
+
+    @media (min-width: 1400px) {
+      margin-right: 37.5px;
+      min-width: 45px;
+      width: 45px !important;
+      height: 45px;
+    }
+  }
+}

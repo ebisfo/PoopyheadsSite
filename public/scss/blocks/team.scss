@@ -1,0 +1,91 @@
+.team {
+  padding-bottom: 80px;
+  background: url(@img/bg-team.svg) no-repeat right top;
+
+  @media (min-width: 992px) {
+    padding-bottom: 120px;
+  }
+
+  &__title {
+    margin-bottom: 14px;
+  }
+
+  &__subtitle {
+    margin-bottom: 36px;
+  }
+
+  .owl-stage {
+    display: flex;
+  }
+
+  .owl-stage-outer {
+    padding-left: 3px;
+  }
+
+  .owl-dots {
+    margin-top: 40px !important;
+
+    .owl-dot {
+
+      span {
+        width: 8px;
+        height: 8px;
+        background-color: transparent;
+        border: 1px solid #8b8b8f;
+        margin: 0 12.5px;
+
+        &:hover {
+          background-color: #8b8b8f;
+        }
+      }
+
+      &.active {
+        span {
+          border: 1px solid $white;
+          background-color: $white;
+        }
+      }
+    }
+  }
+
+  &__card {
+    background: #272730;
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-radius: 15px;
+    padding: 15px 16px 40px;
+    height: calc( 100% - 57px );
+
+    &-nickname {
+      font-weight: 600;
+      color: $white;
+      text-align: center;
+      background: #272730;
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      border-radius: 15px;
+      margin-bottom: 28px;
+    }
+
+    &-avatar {
+      width: 90px !important;
+      height: 90px;
+      object-fit: contain;
+      margin: 0 auto 37px;
+
+      @media (min-width: 1400px) {
+        width: 135px !important;
+        height: 135px;
+      }
+    }
+
+    &-desc {
+      padding: 0 9px;
+
+      p {
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}

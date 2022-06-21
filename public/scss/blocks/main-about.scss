@@ -1,0 +1,49 @@
+.main-about {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  overflow-x: hidden;
+
+  @media (min-width: 992px) {
+    padding-bottom: 0;
+  }
+
+  .nft-h1 {
+    margin-bottom: 50px;
+  }
+
+  .nft-h4 {
+    margin-bottom: 14px;
+  }
+
+  .nft-h2 {
+    margin-bottom: 16px;
+  }
+
+  &__desc {
+    margin-bottom: 40px;
+
+    @media (min-width: 992px) {
+      padding-bottom: 0;
+    }
+
+    p {
+      margin-bottom: 40px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__img {
+    width: 100%;
+    object-fit: contain;
+    margin-left: auto;
+    position: relative;
+    right: -12.2vw;
+
+    @media (min-width: 1400px) {
+      right: -7.4vw;
+    }
+  }
+}

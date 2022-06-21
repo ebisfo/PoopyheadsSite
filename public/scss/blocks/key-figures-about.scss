@@ -1,0 +1,95 @@
+.key-figures-about {
+  padding-bottom: 91px;
+  overflow-x: hidden;
+
+  @media (min-width: 1200px) {
+    padding-bottom: 141px;
+  }
+
+  @media (min-width: 1400px) {
+    padding-bottom: 166px;
+  }
+
+  h3.nft-h2 {
+    margin-bottom: 56px;
+  }
+
+  .nft-h4 {
+    margin-bottom: 14px;
+  }
+
+  &__text-box {
+    margin-bottom: 42px;
+  }
+
+  &__cards {
+    padding: 40px 10px 0;
+
+    @media (min-width: 1200px) {
+      max-width: 392px;
+      padding: 0 56px 0 0;
+    }
+
+    @media (min-width: 1400px) {
+      max-width: 587px;
+      padding: 0 101px 0 0;
+    }
+
+    > div {
+      position: relative;
+      padding: 0 10px;
+
+      &:nth-child(3n+1) {
+        top: 0;
+      }
+
+      &:nth-child(3n+2) {
+        top: 0;
+      }
+
+      @media (min-width: 1200px) {
+
+        &:nth-child(3n+1) {
+          top: 20px;
+        }
+
+        &:nth-child(3n+2) {
+          top: 50px;
+        }
+      }
+
+      @media (min-width: 1400px) {
+        padding: 0 15px;
+
+        &:nth-child(3n+1) {
+          top: 30px;
+        }
+
+        &:nth-child(3n+2) {
+          top: 75px;
+        }
+      }
+    }
+  }
+
+  &__card {
+    height: calc( 100% - 20px);
+    margin-bottom: 20px;
+
+    @media (min-width: 1200px) {
+      height: 143px;
+    }
+
+    @media (min-width: 1400px) {
+      height: 215px;
+      margin-bottom: 30px;
+    }
+
+    &-img {
+      width: 100%;
+      height: 100%;
+      border-radius: 11px;
+      object-fit: cover;
+    }
+  }
+}

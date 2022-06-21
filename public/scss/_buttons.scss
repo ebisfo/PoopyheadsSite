@@ -1,0 +1,95 @@
+@keyframes move-letter {
+	0% { top: 0px; opacity: 1; }
+  25% { top: -4px; opacity: .5; }
+	50% { top: -8px; opacity: .3; }
+	75% { top: 8px;  opacity: .2; }
+  100% { top: 4px;  opacity: .1; }
+}
+
+.btn {
+  @include indent-reset();
+  display: inline-block;
+  padding: 12px 26.5px;
+  font-size: 14px;
+  line-height: 20px;
+  color: $black;
+  background-color: $accent;
+  text-decoration: none;
+  border-radius: 10px;
+
+  &:hover {
+
+    span {
+      animation: mmove-letter .4s 1 cubic-bezier(.32, .94, .6, 1);
+      -webkit-animation: move-letter .4s 1 cubic-bezier(.32, .94, .6, 1);
+    }
+  }
+
+  @media (min-width: 1200px) {
+    padding: 14px 34px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  @media (min-width: 1400px) {
+    padding: 18px 40px;
+    font-size: 21px;
+    line-height: 30px;
+  }
+}
+
+.btn-arrow {
+  display: flex;
+  align-items: center;
+  font-family: $inter;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: $white;
+  text-decoration: none;
+
+  svg {
+    margin-right: 14px;
+    width: 40px;
+    height: 40px;
+  }
+
+  &:hover {
+    color: $accent;
+    transition: linear $normal;
+
+    svg {
+      circle {
+        fill: $accent;
+        transition: linear $normal;
+      }
+
+      path {
+        fill: $black;
+        transition: linear $normal;
+      }
+    }
+  }
+
+  @media (min-width: 1200px) {
+    font-size: 16px;
+    line-height: 24px;
+
+    svg {
+      margin-right: 16px;
+      width: 44px;
+      height: 44px;
+    }
+  }
+
+  @media (min-width: 1400px) {
+    font-size: 21px;
+    line-height: 30px;
+
+    svg {
+      margin-right: 18px;
+      width: 50px;
+      height: 50px;
+    }
+  }
+}

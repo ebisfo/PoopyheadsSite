@@ -1,0 +1,39 @@
+.text-about {
+  padding-bottom: 60px;
+
+  @media (min-width: 992px) {
+    padding-bottom: 120px;
+  }
+
+  &__desc {
+    padding-left: 0;
+
+    @media (min-width: 1200px) {
+      padding-left: 40px;
+    }
+  }
+
+  &__wrapper {
+
+    &-avatar {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #272730;
+      border-radius: 50%;
+      overflow: hidden;
+      margin-bottom: 20px;
+      position: relative;
+      padding-bottom: 100%;
+
+      img {
+        position: absolute;
+        top: 16px;
+        left: 17%;
+        width: 65%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}

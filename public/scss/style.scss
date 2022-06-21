@@ -1,0 +1,38 @@
+// @import "fonts";
+@import "_mixins";
+@import "_variables";
+@import "_global";
+@import "_text";
+@import "_buttons";
+
+// Blocks
+@import "blocks/header";
+@import "blocks/hero";
+@import "blocks/about-project";
+@import "blocks/section-text";
+@import "blocks/philosophy";
+@import "blocks/key-figures";
+@import "blocks/features";
+@import "blocks/benefits";
+@import "blocks/pro";
+@import "blocks/extras";
+@import "blocks/learn-more";
+@import "blocks/roadmap";
+@import "blocks/partners";
+@import "blocks/extras-plate";
+@import "blocks/top-sales";
+@import "blocks/faq";
+@import "blocks/team";
+@import "blocks/reviews";
+@import "blocks/footer";
+@import "blocks/mobile-menu";
+
+@import "blocks/main-about";
+@import "blocks/freakzers-about";
+@import "blocks/key-figures-about";
+@import "blocks/text-about";
+@import "blocks/partners-about";
+
+@import "blocks/page-404";
+
+@import "blocks/section-content";

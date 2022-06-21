@@ -1,0 +1,299 @@
+.top-sales {
+  position: relative;
+  padding-bottom: 90px;
+
+  @media (min-width: 1200px) {
+    padding-bottom: 120px;
+  }
+
+  @media (min-width: 1400px) {
+    padding-bottom: 180px;
+  }
+
+  &::after {
+    content: "";
+    display: none;
+    position: absolute;
+    top: 720px;
+    left: -350px;
+    width: 493px;
+    height: 493px;
+    background: linear-gradient(162.6deg, #C9B494 23.13%, rgba(201, 180, 148, 0) 81.3%);
+    filter: blur(173px);
+    z-index: -1;
+
+    @media (min-width: 992px) {
+      display: block;
+    }
+  }
+
+  &::before {
+    content: "";
+    display: none;
+    position: absolute;
+    top: 720px;
+    left: 0;
+    width: 107px;
+    height: 107px;
+    background: url(@img/bg-star.svg) no-repeat;
+    background-size: contain;
+    z-index: -1;
+
+    @media (min-width: 992px) {
+      display: block;
+    }
+  }
+
+  &__title {
+    text-align: center;
+    margin-bottom: 21px;
+  }
+
+  &__subtitle {
+    text-align: center;
+    margin-bottom: 30px;
+
+    @media (min-width: 565px) {
+      margin-bottom: 64px;
+    }
+  }
+
+  .circular-slider {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    background: none;
+    margin-bottom: 90px;
+
+    @media (min-width: 565px) {
+      background: url(@img/homepage/circle-sales.svg) no-repeat;
+      background-position: 50% 0%;
+      background-size: contain;
+    }
+
+    .wrapper {
+      width: 100%;
+      height: 215px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      position: relative;
+      box-sizing: border-box;
+      padding: 54px 20px 0px 20px;
+      overflow: hidden;
+
+      @media (min-width: 565px) {
+        height: 280px;
+      }
+
+      @media (min-width: 768px) {
+        padding: 80px 20px 0px 20px;
+      }
+
+      @media (min-width: 992px) {
+        height: 440px;
+        padding: 104px 20px 0px 20px;
+      }
+
+      @media (min-width: 1200px) {
+        height: 540px;
+        padding: 140px 20px 0px 20px;
+      }
+
+      @media (min-width: 1400px) {
+        height: 659px;
+        padding: 170px 20px 0px 20px;
+      }
+
+      .controls {
+
+        &__left,
+        &__right {
+          position: absolute;
+          cursor: pointer;
+          top: 50%;
+          z-index: 101;
+          transition: .6s all;
+
+          svg {
+            width: 40px;
+            height: 40px;
+
+            @media (min-width: 1400px) {
+              width: 60px;
+              height: 60px;
+            }
+          }
+
+          &:hover {
+            svg {
+
+              circle {
+                fill: $accent;
+
+                &:nth-child(2) {
+                  stroke: $accent;
+                  opacity: 1;
+                }
+              }
+
+              path {
+                fill: #16161E;
+              }
+            }
+          }
+        }
+
+        &__right {
+          right: 0%;
+          transform: translate(0%, -50%);
+
+          @media (min-width: 1400px) {
+            right: 20%;
+          }
+
+          @media (min-width: 1600px) {
+            right: 24%;
+          }
+        }
+
+        &__left {
+          left: 0%;
+          transform: translateY(-50%);
+
+          @media (min-width: 1400px) {
+            left: 20%;
+          }
+
+          @media (min-width: 1600px) {
+            left: 24%;
+          }
+
+          .icon-wrapper{
+            transform: rotate(-180deg);
+          }
+        }
+      }
+
+      .slides-holder {
+        transform-origin: center;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        z-index: 100;
+
+        &__number {
+          margin-top: 12px;
+          opacity: 0;
+          display: block;
+          background-color: $accent;
+          border-radius: 50px;
+          font-weight: 500;
+          font-size: 12px;
+          line-height: 17px;
+          color: $black;
+          padding: 3px 0;
+          text-align: center;
+
+          @media (min-width: 1200px) {
+            font-size: 19px;
+            line-height: 27px;
+            padding: 3px 20px;
+          }
+
+          @media (min-width: 1400px) {
+            font-size: 28.5px;
+            line-height: 40px;
+          }
+        }
+      }
+
+      .slides-holder__item {
+        text-decoration: none;
+        position: absolute;
+        transform-origin: center;
+        transition: .3s linear transform;
+        opacity: .5;
+        text-align: center;
+
+        img {
+          width: 100%;
+          height: 100%;
+          border-radius: 15px;
+          user-select: none;
+          transform: scale(.5);
+          height: 72px !important;
+          object-fit: cover;
+
+          @media (min-width: 565px) {
+            height: 110px !important;
+          }
+
+          @media (min-width: 992px) {
+            height: 174px !important;
+          }
+
+          @media (min-width: 1200px) {
+            height: 215px !important;
+          }
+
+          @media (min-width: 1400px) {
+            height: 254px !important;
+            border-radius: 22.5px;
+          }
+        }
+
+        &_active {
+          opacity: 1;
+
+          img {
+            display: block;
+            transition: .3s linear all;
+            transform: scale(1.3) !important;
+            height: 100px !important;
+
+            @media (min-width: 565px) {
+              height: 115px !important;
+            }
+
+            @media (min-width: 992px) {
+              height: 170px !important;
+            }
+
+            @media (min-width: 1200px) {
+              height: 200px !important;
+            }
+
+            @media (min-width: 1400px) {
+              height: 254px !important;
+            }
+          }
+
+          .slides-holder__number {
+            margin-top: 32px;
+            opacity: 1;
+            transform: scale(1.3);
+
+            @media (min-width: 992px) {
+              margin-top: 44px;
+            }
+
+            @media (min-width: 1200px) {
+              margin-top: 54px;
+            }
+
+            @media (min-width: 1400px) {
+              margin-top: 66px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+

@@ -1,0 +1,103 @@
+.about-project {
+  @include indent-reset();
+  padding: 58px 0 127px;
+  overflow-x: clip;
+  position: relative;
+
+  &::after {
+    content: "";
+    display: none;
+    position: absolute;
+    width: 236px;
+    height: 236px;
+    left: -245px;
+    top: 356px;
+    background: #C9B494;
+    filter: blur(143px);
+    z-index: -1;
+
+    @media (min-width: 992px) {
+      display: block;
+    }
+  }
+
+  &__title {
+    margin-bottom: 14px;
+  }
+
+  &__subtitle {
+    margin-bottom: 16px;
+  }
+
+  &__desc {
+    @include indent-reset();
+    margin-bottom: 42px;
+  }
+
+  &__number {
+    user-select: none;
+    margin-top: 18%;
+    position: relative;
+    display: block;
+    font-family: $libre;
+    font-weight: 600;
+    font-size: 70px;
+    line-height: 84px;
+    color: $white;
+
+    @media (min-width: 1200px) {
+      font-size: 84px;
+      line-height: 100px;
+    }
+
+    @media (min-width: 1400px) {
+      font-size: 100px;
+      line-height: 120px;
+    }
+
+    &::after {
+      position: absolute;
+      content: '';
+      top: -35px;
+      right: -70px;
+      z-index: -1;
+      width: 63px;
+      height: 54px;
+      background-image: url(@img/icons/stars.svg);
+      background-repeat: no-repeat;
+    }
+  }
+
+  &__shadow-number {
+    position: absolute;
+    top: -8px;
+    left: 35px;
+    z-index: -1;
+    font-family: $libre;
+    font-weight: 800;
+    font-size: 99.3049px;
+    line-height: 154px;
+    filter: drop-shadow(0px 0px 1px rgba(255, 255, 255, 0.2));
+    color: #17171f;
+
+    @media (min-width: 1200px) {
+      top: -50px;
+      font-size: 147.266px;
+      line-height: 228px;
+    }
+
+    @media (min-width: 1400px) {
+      top: -10px;
+      left: 10px;
+      font-size: 183.266px;
+    }
+  }
+
+  &__number-sign {
+    font-family: $libre;
+    font-weight: 400;
+    font-size: 23px;
+    line-height: 30px;
+    color: $white;
+  }
+}

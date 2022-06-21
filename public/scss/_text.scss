@@ -1,0 +1,83 @@
+.nft-h1,
+.nft-h2,
+.nft-h3 {
+  @include indent-reset();
+  font-family: $libre;
+  font-weight: 500;
+  color: $white;
+}
+
+.nft-h1 {
+  font-size: 38px;
+  line-height: 46px;
+
+  @media (min-width: 992px) {
+    font-size: 44px;
+    line-height: 52px;
+  }
+
+  @media (min-width: 1200px) {
+    font-size: 54px;
+    line-height: 62px;
+  }
+
+  @media (min-width: 1400px) {
+    font-size: 81px;
+    line-height: 94px;
+  }
+}
+
+.nft-h2 {
+  font-size: 26px;
+  line-height: 36px;
+
+  @media (min-width: 992px) {
+    font-size: 30px;
+    line-height: 38px;
+  }
+
+  @media (min-width: 1200px) {
+    font-size: 36px;
+    line-height: 50px;
+  }
+
+  @media (min-width: 1400px) {
+    font-size: 54px;
+    line-height: 75px;
+  }
+}
+
+.nft-h3 {
+  font-size: 16px;
+  line-height: 27px;
+
+  @media (min-width: 1200px) {
+    font-size: 17px;
+    line-height: 27px;
+  }
+
+  @media (min-width: 1400px) {
+    font-size: 26px;
+    line-height: 41px;
+  }
+}
+
+.nft-h4 {
+  @include indent-reset();
+  font-family: $inter;
+  font-weight: 400;
+  color: $accent;
+  font-size: 11px;
+  line-height: 19px;
+  text-transform: uppercase;
+
+  @media (min-width: 1200px) {
+    font-size: 12px;
+    line-height: 20px;
+  }
+
+  @media (min-width: 1400px) {
+    font-size: 14px;
+    line-height: 22px;
+  }
+}

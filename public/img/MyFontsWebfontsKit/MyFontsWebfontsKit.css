@@ -1,0 +1,28 @@
+/**
+ * @license
+ * MyFonts Webfont Build ID 5043126, 2022-06-19T16:45:16-0400
+ * 
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are 
+ * explicitly restricted from using the Licensed Webfonts(s).
+ * 
+ * You may obtain a valid license at the URLs below.
+ * 
+ * Webfont: Gliker-Bold by Studio Sun
+ * URL: https://www.myfonts.com/fonts/studio-sun/gliker/bold/
+ * Copyright: Copyright © 2020 by Cahya Sofyan. All rights reserved.
+ * 
+ * 
+ * 
+ * © 2022 MyFonts Inc
+*/
+
+
+/* @import must be at top of file, otherwise CSS will not work */
+@import url("//hello.myfonts.net/count/4cf3b6");
+  
+@font-face {
+  font-family: "Gliker-Bold";
+  src: url('webFonts/GlikerBold/font.woff2') format('woff2'), url('webFonts/GlikerBold/font.woff') format('woff');
+}
+

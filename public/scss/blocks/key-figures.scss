@@ -1,0 +1,99 @@
+.key-figures {
+  position: relative;
+  padding-bottom: 80px;
+
+  &::after {
+    content: "";
+    display: none;
+    position: absolute;
+    top: 200px;
+    right: -250px;
+    width: 493px;
+    height: 493px;
+    background: linear-gradient(162.6deg, #C9B494 23.13%, rgba(201, 180, 148, 0) 81.3%);
+    filter: blur(173px);
+    z-index: -1;
+
+    @media (min-width: 992px) {
+      display: block;
+    }
+  }
+
+  @media (min-width: 992px) {
+    padding-bottom: 120px;
+  }
+
+  &__title {
+    margin-bottom: 14px;
+  }
+
+  &__subtitle {
+    margin-bottom: 50px;
+  }
+
+  &__list-items {
+    position: relative;
+
+    &::after {
+      position: absolute;
+      content: '';
+      top: -35px;
+      right: 0;
+      z-index: -1;
+      width: 63px;
+      height: 54px;
+      background: url(@img/icons/stars.svg) no-repeat;
+    }
+  }
+
+  &__list-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+
+    &-title {
+      min-width: 90px;
+      width: auto;
+      padding-right: 25px;
+      color: $white;
+      font-family: $libre;
+      font-weight: 600;
+      font-size: 36px;
+      line-height: 52px;
+
+      @media (min-width: 992px) {
+        width: 200px;
+        font-size: 50px;
+        line-height: 76px;
+      }
+
+      @media (min-width: 1200px) {
+        font-size: 83.7612px;
+        line-height: 126px;
+      }
+
+      @media (min-width: 1400px) {
+        width: 288px;
+        font-size: 125.642px;
+        line-height: 188px;
+        padding-right: 75px;
+      }
+    }
+
+    &-text {
+
+      h4 {
+        margin: 0 0 3px;
+
+        @media (min-width: 1400px) {
+          font-size: 26px;
+          line-height: 27px;
+        }
+      }
+
+      p {
+        margin: 0;
+      }
+    }
+  }
+}

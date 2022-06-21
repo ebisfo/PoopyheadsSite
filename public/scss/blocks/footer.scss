@@ -1,0 +1,44 @@
+footer {
+  position: relative;
+  margin-bottom: 35px;
+
+  &::before {
+    content: '';
+    display: block;
+    max-width: 1080px;
+    margin: 0 auto 35px;
+    height: 1px;
+    opacity: 0.2;
+    background-color: $white;
+  }
+
+  .social-icons {
+    @include list-reset();
+    display: flex;
+    justify-content: center;
+
+    &__item {
+
+      &:nth-child(2) {
+        margin: 0 55px;
+      }
+    }
+
+    &__link {
+      display: block;
+      height: 40px;
+
+      svg {
+        width: 40px;
+        height: 40px;
+        color: $white;
+        transition: all $normal ease-in-out;
+
+        &:hover,
+        &:active {
+          color: $accent;
+        }
+      }
+    }
+  }
+}

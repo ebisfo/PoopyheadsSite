@@ -1,0 +1,120 @@
+.extras {
+  position: relative;
+  padding-bottom: 80px;
+
+  &::after {
+    content: "";
+    display: none;
+    position: absolute;
+    top: 420px;
+    left: -350px;
+    width: 493px;
+    height: 493px;
+    background: linear-gradient(162.6deg, #C9B494 23.13%, rgba(201, 180, 148, 0) 81.3%);
+    filter: blur(173px);
+    z-index: -1;
+
+    @media (min-width: 992px) {
+      display: block;
+    }
+  }
+
+  &::before {
+    content: "";
+    display: none;
+    position: absolute;
+    top: 420px;
+    left: 0;
+    width: 200px;
+    height: 200px;
+    background: url(@img/bg-star.svg) no-repeat;
+    background-size: contain;
+    z-index: -1;
+
+    @media (min-width: 992px) {
+      display: block;
+    }
+  }
+
+  @media (min-width: 992px) {
+    padding-bottom: 120px;
+  }
+
+  &__title  {
+    margin-bottom: 14px;
+  }
+
+  &__subtitle  {
+    margin-bottom: 16px;
+  }
+
+  &__desc {
+    margin-bottom: 40px;
+
+    &:last-child {
+
+      p {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__cards {
+    padding-left: 20px;
+
+    @media (min-width: 1400px) {
+      padding-left: 80px;
+    }
+  }
+
+  &__card {
+    margin-bottom: 50px;
+
+    &::after {
+      content: '';
+      display: block;
+      width: 40%;
+      height: 2px;
+      background-color: $accent;
+    }
+
+    &-header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 17px;
+    }
+
+    &-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 48px;
+      height: 48px;
+      background: #272730;
+      border: 1px solid rgba(255, 255, 255, 0.07);
+      border-radius: 15px;
+      margin-right: 14px;
+
+      @media (min-width: 1400px) {
+        width: 72px;
+        height: 72px;
+        margin-right: 21px;
+      }
+    }
+
+    &-img {
+      width: 30px;
+      height: 30px;
+      object-fit: contain;
+
+      @media (min-width: 1400px) {
+        width: 45px;
+        height: 45px;
+      }
+    }
+
+    &-desc {
+      margin-bottom: 16px;
+    }
+  }
+}

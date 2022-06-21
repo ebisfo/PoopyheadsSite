@@ -1,0 +1,47 @@
+.partners {
+  padding-bottom: 80px;
+
+  @media (min-width: 992px) {
+    padding-bottom: 120px;
+  }
+
+  &__title  {
+    margin-bottom: 14px;
+  }
+
+  &__subtitle  {
+    margin-bottom: 30px;
+  }
+
+  .owl-dots {
+    margin-top: 40px !important;
+
+    .owl-dot {
+
+      span {
+        width: 8px;
+        height: 8px;
+        background-color: transparent;
+        border: 1px solid #8b8b8f;
+        margin: 0 12.5px;
+
+        &:hover {
+          background-color: #8b8b8f;
+        }
+      }
+
+      &.active {
+        span {
+          border: 1px solid $white;
+          background-color: $white;
+        }
+      }
+    }
+  }
+
+  &__logo {
+    width: 100%;
+    height: 100px;
+    object-fit: contain;
+  }
+}

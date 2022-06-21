@@ -1,0 +1,93 @@
+.reviews {
+  position: relative;
+  padding-bottom: 60px;
+
+  @media (min-width: 992px) {
+    padding-bottom: 100px;
+  }
+
+  &::after {
+    content: "";
+    display: none;
+    position: absolute;
+    bottom: 0;
+    left: -300px;
+    width: 493px;
+    height: 493px;
+    background: linear-gradient(162.6deg, #C9B494 23.13%, rgba(201, 180, 148, 0) 81.3%);
+    filter: blur(173px);
+    z-index: -1;
+
+    @media (min-width: 992px) {
+      display: block;
+    }
+  }
+
+  &__title  {
+    margin-bottom: 14px;
+    text-align: center;
+  }
+
+  &__subtitle  {
+    margin-bottom: 56px;
+    text-align: center;
+  }
+
+  &__wrapper-cards {
+    column-gap: 20px;
+    column-count: 1;
+    padding: 0;
+
+    @media (min-width: 768px) {
+      column-count: 2;
+    }
+
+    @media (min-width: 992px) {
+      column-count: 3;
+    }
+  }
+
+  &__card {
+    display: inline-block;
+    background: #272730;
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-radius: 15px;
+    padding: 25px;
+    margin-bottom: 20px;
+
+    &-header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 16px;
+    }
+
+    &-img {
+      width: 60px;
+      height: 60px;
+      object-fit: contain;
+      border-radius: 50%;
+      margin-right: 21px;
+
+      @media (min-width: 1400px) {
+        width: 90px;
+        height: 90px;
+      }
+    }
+
+    &-name {
+      font-weight: 600;
+      color: $white;
+      margin-bottom: 3px;
+    }
+
+    &-desc {
+
+      p {
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
