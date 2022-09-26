@@ -32,6 +32,7 @@ import { GatewayProvider } from '@civic/solana-gateway-react';
 import { sendTransaction } from './connection';
 import { WalletAdapterNetwork } from '@solana/wallet-adapter-base';
 
+
 const ConnectButton = styled(WalletDialogButton)`
   width: 100%;
   height: 60px;

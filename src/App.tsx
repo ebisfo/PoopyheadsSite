@@ -20,6 +20,10 @@ import {
 import { WalletDialogProvider } from '@solana/wallet-adapter-material-ui';
 
 import { ThemeProvider, createTheme } from '@material-ui/core';
+import styled from 'styled-components';
+import button1 from './button1';
+
+
 
 const theme = createTheme({
   palette: {
@@ -47,36 +51,51 @@ const connection = new anchor.web3.Connection(
   rpcHost ? rpcHost : anchor.web3.clusterApiUrl('devnet'),
 );
 
+function clickMe() {
+  alert('You clicked me!');
+}
+
+// const Button = styled.button`
+// background-color: black;
+// color: white;
+// font-size: 20px;
+// padding: 10px 60px;
+// border-radius: 5px;
+// margin: 10px 0px;
+// cursor: pointer;
+// `;
+
 const App = () => {
   const endpoint = useMemo(() => clusterApiUrl(network), []);
 
-  const wallets = useMemo(
-    () => [
-      getPhantomWallet(),
-      getSolflareWallet(),
-      getSlopeWallet(),
-      getSolletWallet({ network }),
-      getSolletExtensionWallet({ network }),
-    ],
-    [],
-  );
+  // const wallets = useMemo(
+  //   () => [
+  //     getPhantomWallet(),
+  //     getSolflareWallet(),
+  //     getSlopeWallet(),
+  //     getSolletWallet({ network }),
+  //     getSolletExtensionWallet({ network }),
+  //   ],
+  //   [],
+  // );
+  // const Button = styled.button `
+  // background-color: blue;
+  // `
+
+ 
 
   return (
-    <ThemeProvider theme={theme}>
-      <ConnectionProvider endpoint={endpoint}>
-        <WalletProvider wallets={wallets} autoConnect>
-          <WalletDialogProvider>
-            <Home
-              candyMachineId={candyMachineId}
-              connection={connection}
-              txTimeout={DEFAULT_TIMEOUT}
-              rpcHost={rpcHost}
-              network={network}
-            />
-          </WalletDialogProvider>
-        </WalletProvider>
-      </ConnectionProvider>
-    </ThemeProvider>
+    <div>
+      <a href = 
+    <button onClick={clickMe}>
+  Disabled Button
+</button>
+
+  </div>
+   
+   
+  
+  
   );
 };
 

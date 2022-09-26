@@ -25,6 +25,7 @@ export const CTAButton = styled(Button)`
 `; // add your own styles here
 
 export const MintButton = ({
+  
   onMint,
   candyMachine,
   isMinting,
@@ -58,6 +59,7 @@ export const MintButton = ({
 
     return 'MINT';
   };
+ 
 
   useEffect(() => {
     const mint = async () => {
@@ -80,6 +82,7 @@ export const MintButton = ({
     onMint,
     webSocketSubscriptionId,
   ]);
+  
 
   const previousGatewayStatus = usePrevious(gatewayStatus);
   useEffect(() => {
